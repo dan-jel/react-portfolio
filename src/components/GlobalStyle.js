@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    font-site: 1.1rem;
+    font-size: 1.1rem;
   }
   
   p {

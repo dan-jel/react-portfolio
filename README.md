@@ -3,9 +3,9 @@
 1. npm install
   -> um node modules in dem entsprechenden verzeichnis zu installieren.
 
-$ docker build -f Dockerfile.prod -t my-first-image:latest .
+$ docker build -f Dockerfile.prod -t portfolio .
 
-$ docker run -it -p 80:80 --rm my-first-image:latest
+$ docker run -it -p 80:80 -d --rm portfolio
 
 
 

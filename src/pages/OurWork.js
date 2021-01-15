@@ -6,6 +6,8 @@ import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 
+import ScrollTop from "../components/ScrollTop";
+
 import { motion } from "framer-motion";
 import {
   sliderContainer,
@@ -29,6 +31,7 @@ const OurWork = () => {
       animate="show"
       layout="position"
     >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -72,6 +75,9 @@ const Work = styled(motion.div)`
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 3rem 3rem;
   }
 `;
 

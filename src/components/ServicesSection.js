@@ -69,6 +69,9 @@ const Services = styled(About)`
     color: #23d997;
     font-weight: bold;
   }
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Cards = styled.div`

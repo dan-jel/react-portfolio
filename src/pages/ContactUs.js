@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim, lineAnim } from "../animation";
 import styled from "styled-components";
+import ScrollTop from "../components/ScrollTop";
 
 const ContactUs = () => {
   return (
@@ -12,10 +13,9 @@ const ContactUs = () => {
       animate="show"
       exit="exit"
     >
+      <ScrollTop />
       <Title>
-        <Hide>
-          <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
-        </Hide>
+        <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
       </Title>
       <motion.div variants={lineAnim} className="line"></motion.div>
       <div>
@@ -51,11 +51,15 @@ const ContactUs = () => {
 const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
-  min-height: 900vh;
+  min-height: 90vh;
   .line {
     height: 0.3rem;
     background: #23d997;
     margin-bottom: 3rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 5rem;
+  }
 `;
 
 const Title = styled.div`

@@ -6,9 +6,12 @@ import { MovieState } from "../movieState";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
+  // eslint-disable-next-line
   const [movies, setMovies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
@@ -19,6 +22,7 @@ const MovieDetail = () => {
 
   return (
     <>
+      <ScrollTop />
       {movie && (
         <Details
           variants={pageAnimation}
@@ -83,6 +87,10 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 1rem 2rem;
+  }
 `;
 
 const AwardStyle = styled.div`
